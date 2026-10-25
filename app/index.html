@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Greeting for Rohit</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #141e30, #243b55);
+        }
+
+        .card {
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            color: #d1d5db;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            background: #38bdf8;
+            color: #082f49;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #7dd3fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Hey Rohit! 👋</h1>
+        <p>Another day, another step toward greatness.</p>
+        <p>Keep building. Keep learning. Keep growing. 🚀</p>
+
+        <button onclick="greet()">Click Me!</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function greet() {
+            document.getElementById("message").textContent =
+                "You've got this, bro! 💪";
+        }
+    </script>
+</body>
+</html>
