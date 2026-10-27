@@ -8,8 +8,27 @@ The application itself is intentionally simple (static website) because the prim
 
 ---
 
+# Project Status
+
+✅ Application CI/CD Completed
+
+✅ Infrastructure CI/CD Completed
+
+✅ Docker Image Versioning
+
+✅ Terraform Remote Backend
+
+✅ Launch Template Versioning
+
+✅ ASG Instance Refresh
+
+✅ Rollback Strategy Tested
+
+🚧 Next Phase: Amazon ECS
+
 ## CI Flow
 
+```text
 Developer Commit
 ↓
 GitHub Webhook
@@ -21,18 +40,18 @@ Docker Build
 Docker Image Versioning
 ↓
 Docker Hub Push
-
+```
 ---
 
 ## Repository Structure
-
+```text
 .
 ├── app/
 │   └── index.html
 ├── Dockerfile
 ├── Jenkinsfile
 └── README.md
-
+```
 ---
 
 ## Docker Build
@@ -78,12 +97,13 @@ If version 10 fails:
 
 Infrastructure variable:
 
-image_version = "10"
+docker_image_version = "10"
 
 can be reverted to:
 
-image_version = "9"
+docker_image_version = "9"
 
+```text
 Terraform Apply
 ↓
 Launch Template Update
@@ -91,7 +111,7 @@ Launch Template Update
 ASG Instance Refresh
 ↓
 Rollback Complete
-
+```
 ---
 
 ## Technologies Used
